@@ -1,0 +1,45 @@
+name: "🕷️ Bug report"
+description: Report errors or unexpected behavior
+labels:
+  - bug
+body:
+  - type: input
+    attributes:
+      label: To Do App version
+      description: See about section in To Do App console
+    validations:
+      required: true
+
+  - type: dropdown
+    attributes:
+      label: Cloud or Self Hosted
+      description: How / Where was To Do App installed from?
+      multiple: true
+      options:
+        - Cloud
+        - Self Hosted (Docker)
+        - Self Hosted (Source)
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Steps to reproduce
+      description: We highly suggest including screenshots and a bug report log. Please use the right markdown syntax for code blocks.
+      placeholder: Having detailed steps helps us reproduce the bug.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: ✔️ Expected Behavior
+      placeholder: What were you expecting?
+    validations:
+      required: false
+
+  - type: textarea
+    attributes:
+      label: ❌ Actual Behavior
+      placeholder: What happened instead?
+    validations:
+      required: false
